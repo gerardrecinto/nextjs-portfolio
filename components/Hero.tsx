@@ -1,4 +1,5 @@
 import React from 'react'
+import MagicButton from './ui/MagicButton'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 
@@ -24,7 +25,11 @@ const Hero = () => {
               words='Transforming Concepts into Seamless Experiences'
             />
             <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>Hi, I&apos;m Gerard, a Senior Engineer based in San Diego.</p>
-
+            <a href="#about">
+              <MagicButton 
+                title="Show my work"
+              />
+            </a>
         </div>
 
       </div>
