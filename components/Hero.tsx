@@ -2,10 +2,55 @@ import React from 'react'
 import MagicButton from './ui/MagicButton'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
+import { FaLocationArrow } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36">
+    <div className="h-screen flex flex-col justify-center items-center relative">
+      {/* Spotlights */}
+      <Spotlight className='-top-40 -left-10 md:-left-32 md:-top-20 h-screen' fill="white" />
+      <Spotlight className='-top-10 -left-full h-[80vh] w-[50vw]' fill="purple" />
+      <Spotlight className='-top-28 left-80 h-[80vh] w-[50vw]' fill="blue" />
+
+      {/* Dark overlay */}
+      <div className="absolute inset-0 flex items-center justify-center dark:bg-black-100 bg-white dark:bg-opacity-20 bg-opacity-20">
+        {/* Mask */}
+        <div className="absolute inset-0 pointer-events-none flex items-center justify-center dark:bg-black-100 bg-white" style={{ maskImage: 'radial-gradient(ellipse at center, transparent 20%, black)' }}></div>
+      </div>
+
+      {/* Content */}
+      <div className='flex flex-col items-center justify-center relative z-10'>
+       
+        <TextGenerateEffect
+          className='text-center text-[40px] md:text-5xl lg:text-6xl'
+          words=' Dynamic Web Magic with Next.js'
+        />
+        <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>Hi, I&apos;m Gerard, a Senior Engineer based in San Diego.</p>
+        <a href="#about" className="mt-4">
+          <MagicButton 
+            title="Show my work"
+            icon={<FaLocationArrow />}
+            position='right'
+          />
+        </a>
+      </div>
+    </div>
+  )
+}
+
+export default Hero
+
+/*
+import React from 'react'
+import MagicButton from './ui/MagicButton'
+import { Spotlight } from './ui/Spotlight'
+import { TextGenerateEffect } from './ui/TextGenerateEffect'
+import {FaLocationArrow} from "react-icons/fa";
+const Hero = () => {
+  //<div className="h-screen w-screen relative">
+  //<div className="pb-20 pt-36"> 
+  return (
+    <div className="pb-40 pt-80"> 
       <div>
         <Spotlight className='-top-40 -left-10 md:-left-32 md:-top-20 h-screen' fill="white" />
         <Spotlight className='-top-10 -left-full h-[80vh] w-[50vw]' fill="purple" />
@@ -28,6 +73,8 @@ const Hero = () => {
             <a href="#about">
               <MagicButton 
                 title="Show my work"
+                icon={<FaLocationArrow/>}
+                position='right'
               />
             </a>
         </div>
@@ -39,3 +86,4 @@ const Hero = () => {
 }
 
 export default Hero
+*/
