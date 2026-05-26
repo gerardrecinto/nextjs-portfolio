@@ -48,15 +48,16 @@ const PortfolioSections = () => {
               About
             </p>
             <h2 className="text-3xl font-bold leading-tight text-white md:text-4xl">
-              Platform engineer focused on release confidence.
+              Senior software engineer focused on release confidence.
             </h2>
           </div>
           <div className="space-y-5 text-sm leading-7 text-white-200 md:text-base">
             <p>
-              I work across CI/CD, cloud infrastructure, Kubernetes, and
-              automation to turn manual delivery paths into repeatable systems.
-              My strongest work sits where product velocity, reliability, and
-              developer experience meet.
+              I work across software engineering, DevOps/CI/CD, cloud
+              infrastructure, Kubernetes, QA automation, and release operations
+              to turn manual delivery paths into repeatable systems. My
+              strongest work sits where product velocity, reliability, failure
+              analysis, and developer experience meet.
             </p>
             <div className="grid gap-3 sm:grid-cols-2">
               {strengths.map((strength) => (
@@ -124,7 +125,7 @@ const PortfolioSections = () => {
               Contact
             </p>
             <h2 className="mb-3 text-2xl font-bold text-white md:text-3xl">
-              Open to platform, DevOps, and CI/CD engineering roles.
+              Open to CI, developer tooling, and release engineering roles.
             </h2>
             <div className="flex flex-wrap gap-3">
               {toolchain.map(({ label, icon: Icon }) => (

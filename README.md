@@ -10,7 +10,7 @@
 
 ![Demo](docs/assets/demo.gif)
 
-> Personal portfolio for a Senior Platform / CI/CD Engineer with 8 years at Qualcomm. Built with Next.js 14 App Router, TypeScript, Tailwind CSS, and Framer Motion. Deployed to AWS S3 + CloudFront for global edge delivery.
+> Personal portfolio for Gerard Recinto, a Senior Software Engineer targeting Apple CI, Developer Tooling, and Release Engineering roles. Covers 8+ years across software engineering, DevOps/CI/CD, release automation, cloud reliability, and QA automation. Built with Next.js 14 App Router, TypeScript, Tailwind CSS, and Framer Motion. Deployed to AWS S3 + CloudFront for global edge delivery.
 
 Commercial angle and funnel notes: [docs/go-to-market.md](docs/go-to-market.md).
 

@@ -17,14 +17,14 @@ const Hero = () => {
 
       <div className='flex flex-col items-center justify-center relative z-10 max-w-4xl px-4'>
         <p className="text-center uppercase tracking-[0.28em] text-xs text-blue-100">
-          Platform engineering portfolio
+          Apple CI / Developer Tooling / Release Engineering
         </p>
         <TextGenerateEffect
           className='text-center text-[40px] md:text-5xl lg:text-6xl'
           words='Building reliable CI/CD platforms for product teams'
         />
         <p className='text-center mb-4 max-w-2xl text-sm leading-6 text-white-200 md:text-lg lg:text-xl'>
-          Hi, I&apos;m Gerard, a Senior Platform and CI/CD Engineer in San Diego. I build release systems, cloud infrastructure, and developer workflows that make shipping safer and faster.
+          Hi, I&apos;m Gerard, a Senior Software Engineer in San Diego. I build CI/CD pipelines, release automation, developer tooling, and reliability workflows for large-scale cloud platforms.
         </p>
         <a href="#about" className="mt-4">
           <MagicButton 
