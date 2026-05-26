@@ -20,6 +20,7 @@ Commercial angle and funnel notes: [docs/go-to-market.md](docs/go-to-market.md).
 - **Text generate effect:** `TextGenerateEffect` splits the heading string by word, renders each word as a Framer Motion span, and staggers opacity + blur from 0 → 1 on mount via `useEffect` + `useAnimate`.
 - **Magic button:** `MagicButton` wraps a button with a conic-gradient animated border (`@keyframes spin`) using a `::before` pseudo-element — pure CSS, no JS animation overhead.
 - **Portfolio sections:** Below-the-fold About, Selected Work, and Contact sections give the single-page site enough substance for recruiter and hiring-manager review.
+- **Impact metrics:** A dedicated metrics band highlights experience, breadth of shipped repositories, and release-readiness focus for quick hiring-manager scanning.
 - **Dark/light theming:** `next-themes` `ThemeProvider` with system-default detection; theme state persists across sessions via `localStorage`.
 - **App Router layout:** Single root `layout.tsx` injects `GeistSans` and `GeistMono` fonts via `next/font/google` — zero layout shift, no FOUT.
 - **Static export:** Fully pre-rendered at build time (`output: 'export'`), served as static HTML/CSS/JS — no Node.js process at runtime.
@@ -58,7 +59,7 @@ app/
 
 components/
 ├── Hero.tsx         above-the-fold: Spotlights + TextGenerateEffect + MagicButton
-├── PortfolioSections.tsx      about, selected work, contact, and toolchain content
+├── PortfolioSections.tsx      about, impact metrics, selected work, contact, and toolchain content
 └── ui/
     ├── MagicButton.tsx        animated border button (conic-gradient CSS)
     ├── Spotlight.tsx          radial gradient spotlight overlay

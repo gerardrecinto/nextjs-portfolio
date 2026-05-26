@@ -8,6 +8,21 @@ const strengths = [
   "Developer experience",
 ];
 
+const impactMetrics = [
+  {
+    value: "8+",
+    label: "years across software, DevOps, QA, and release engineering",
+  },
+  {
+    value: "100+",
+    label: "GitHub repositories spanning apps, automation, infra, and interview prep",
+  },
+  {
+    value: "24/7",
+    label: "operational mindset for rollbacks, observability, and release readiness",
+  },
+];
+
 const projects = [
   {
     title: "Next.js Portfolio",
@@ -70,6 +85,33 @@ const PortfolioSections = () => {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="impact" className="scroll-mt-24">
+        <div className="mb-8 max-w-3xl">
+          <p className="mb-3 text-xs uppercase tracking-[0.24em] text-purple">
+            Impact
+          </p>
+          <h2 className="text-3xl font-bold leading-tight text-white md:text-4xl">
+            Delivery systems measured by confidence, speed, and recovery.
+          </h2>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-3">
+          {impactMetrics.map((metric) => (
+            <article
+              key={metric.value}
+              className="rounded-lg border border-white/[0.12] bg-white/[0.04] p-5"
+            >
+              <p className="mb-3 text-4xl font-bold text-blue-100">
+                {metric.value}
+              </p>
+              <p className="text-sm leading-6 text-white-200">
+                {metric.label}
+              </p>
+            </article>
+          ))}
         </div>
       </section>
 
