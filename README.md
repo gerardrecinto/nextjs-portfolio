@@ -1,5 +1,7 @@
 # Portfolio — Gerard Recinto
 
+![Next.js Portfolio logo](docs/assets/logo.svg)
+
 ![Next.js 14](https://img.shields.io/badge/Next.js-14-000000?logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.x-06B6D4?logo=tailwindcss&logoColor=white)
@@ -9,6 +11,8 @@
 ![Demo](docs/assets/demo.gif)
 
 > Personal portfolio for a Senior Platform / CI/CD Engineer with 8 years at Qualcomm. Built with Next.js 14 App Router, TypeScript, Tailwind CSS, and Framer Motion. Deployed to AWS S3 + CloudFront for global edge delivery.
+
+Commercial angle and funnel notes: [docs/go-to-market.md](docs/go-to-market.md).
 
 ## Features
 
