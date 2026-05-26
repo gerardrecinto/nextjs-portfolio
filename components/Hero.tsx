@@ -6,26 +6,26 @@ import { FaLocationArrow } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="h-screen flex flex-col justify-center items-center relative">
-      {/* Spotlights */}
+    <section className="min-h-[92vh] flex flex-col justify-center items-center relative" aria-label="Hero">
       <Spotlight className='-top-40 -left-10 md:-left-32 md:-top-20 h-screen' fill="white" />
       <Spotlight className='-top-10 -left-full h-[80vh] w-[50vw]' fill="purple" />
       <Spotlight className='-top-28 left-80 h-[80vh] w-[50vw]' fill="blue" />
 
-      {/* Dark overlay */}
       <div className="absolute inset-0 flex items-center justify-center dark:bg-black-100 bg-white dark:bg-opacity-20 bg-opacity-20">
-        {/* Mask */}
         <div className="absolute inset-0 pointer-events-none flex items-center justify-center dark:bg-black-100 bg-white" style={{ maskImage: 'radial-gradient(ellipse at center, transparent 20%, black)' }}></div>
       </div>
 
-      {/* Content */}
-      <div className='flex flex-col items-center justify-center relative z-10'>
-       
+      <div className='flex flex-col items-center justify-center relative z-10 max-w-4xl px-4'>
+        <p className="text-center uppercase tracking-[0.28em] text-xs text-blue-100">
+          Platform engineering portfolio
+        </p>
         <TextGenerateEffect
           className='text-center text-[40px] md:text-5xl lg:text-6xl'
-          words=' Dynamic Web Magic with Next.js'
+          words='Building reliable CI/CD platforms for product teams'
         />
-        <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>Hi, I&apos;m Gerard, a Senior Engineer based in San Diego.</p>
+        <p className='text-center mb-4 max-w-2xl text-sm leading-6 text-white-200 md:text-lg lg:text-xl'>
+          Hi, I&apos;m Gerard, a Senior Platform and CI/CD Engineer in San Diego. I build release systems, cloud infrastructure, and developer workflows that make shipping safer and faster.
+        </p>
         <a href="#about" className="mt-4">
           <MagicButton 
             title="Show my work"
@@ -34,56 +34,8 @@ const Hero = () => {
           />
         </a>
       </div>
-    </div>
+    </section>
   )
 }
 
 export default Hero
-
-/*
-import React from 'react'
-import MagicButton from './ui/MagicButton'
-import { Spotlight } from './ui/Spotlight'
-import { TextGenerateEffect } from './ui/TextGenerateEffect'
-import {FaLocationArrow} from "react-icons/fa";
-const Hero = () => {
-  //<div className="h-screen w-screen relative">
-  //<div className="pb-20 pt-36"> 
-  return (
-    <div className="pb-40 pt-80"> 
-      <div>
-        <Spotlight className='-top-40 -left-10 md:-left-32 md:-top-20 h-screen' fill="white" />
-        <Spotlight className='-top-10 -left-full h-[80vh] w-[50vw]' fill="purple" />
-        <Spotlight className='-top-28 left-80 h-[80vh] w-[50vw]' fill="blue" />
-        <div className="h-screen w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.05] bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0 ">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-        
-        </div>
-        <div className='flex justify-center relative my-20z-10'>
-          <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
-          </div>
-            <h2 className='absolute uppercase tracking-widest text-xs text-center text-blue-100 max-w-80'>
-              Dynamic Web Magic with Next.js
-            </h2>
-            <TextGenerateEffect
-              className='text-center text-[40px] md:text-5xl lg:text-6xl'
-              words='Transforming Concepts into Seamless Experiences'
-            />
-            <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>Hi, I&apos;m Gerard, a Senior Engineer based in San Diego.</p>
-            <a href="#about">
-              <MagicButton 
-                title="Show my work"
-                icon={<FaLocationArrow/>}
-                position='right'
-              />
-            </a>
-        </div>
-
-      </div>
-    </div>
-    
-  )
-}
-
-export default Hero
-*/

@@ -5,7 +5,7 @@
 ![Next.js 14](https://img.shields.io/badge/Next.js-14-000000?logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.x-06B6D4?logo=tailwindcss&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer%20Motion-10-black?logo=framer&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer%20Motion-11-black?logo=framer&logoColor=white)
 ![Deployed](https://img.shields.io/badge/Deployed-AWS%20S3%20%2B%20CloudFront-FF9900?logo=amazonaws&logoColor=white)
 
 ![Demo](docs/assets/demo.gif)
@@ -19,7 +19,8 @@ Commercial angle and funnel notes: [docs/go-to-market.md](docs/go-to-market.md).
 - **Spotlight effect:** Three layered `<Spotlight>` components (white, purple, blue) using `radial-gradient` masks to create a dynamic depth-of-field background — no canvas, no WebGL.
 - **Text generate effect:** `TextGenerateEffect` splits the heading string by word, renders each word as a Framer Motion span, and staggers opacity + blur from 0 → 1 on mount via `useEffect` + `useAnimate`.
 - **Magic button:** `MagicButton` wraps a button with a conic-gradient animated border (`@keyframes spin`) using a `::before` pseudo-element — pure CSS, no JS animation overhead.
-- **Dark/light theming:** `next-themes` `ThemeProvider` with system-default detection; theme toggle persists across sessions via `localStorage`.
+- **Portfolio sections:** Below-the-fold About, Selected Work, and Contact sections give the single-page site enough substance for recruiter and hiring-manager review.
+- **Dark/light theming:** `next-themes` `ThemeProvider` with system-default detection; theme state persists across sessions via `localStorage`.
 - **App Router layout:** Single root `layout.tsx` injects `GeistSans` and `GeistMono` fonts via `next/font/google` — zero layout shift, no FOUT.
 - **Static export:** Fully pre-rendered at build time (`output: 'export'`), served as static HTML/CSS/JS — no Node.js process at runtime.
 
@@ -37,7 +38,7 @@ Commercial angle and funnel notes: [docs/go-to-market.md](docs/go-to-market.md).
 
 ## Architecture
 
-The app is a single-page static export. `app/page.tsx` composes the `Hero` section; additional sections (`About`, `Projects`, `Contact`) are linked from the Hero CTA and scroll into view via `href="#section-id"`. All animation components are client components (`"use client"`) that mount after hydration — the server sends pre-rendered HTML so LCP is instant.
+The app is a single-page static export. `app/page.tsx` composes the `Hero` and `PortfolioSections` sections; `About`, `Projects`, and `Contact` anchors are linked from CTAs and scroll into view via `href="#section-id"`. Animation stays isolated in client components (`"use client"`) that mount after hydration, while the content sections render as server components.
 
 ## Component Notes
 
@@ -57,6 +58,7 @@ app/
 
 components/
 ├── Hero.tsx         above-the-fold: Spotlights + TextGenerateEffect + MagicButton
+├── PortfolioSections.tsx      about, selected work, contact, and toolchain content
 └── ui/
     ├── MagicButton.tsx        animated border button (conic-gradient CSS)
     ├── Spotlight.tsx          radial gradient spotlight overlay
