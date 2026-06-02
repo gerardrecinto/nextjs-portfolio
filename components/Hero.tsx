@@ -16,19 +16,25 @@ const Hero = () => {
       </div>
 
       <div className='flex flex-col items-center justify-center relative z-10 max-w-4xl px-4'>
-        <p className="text-center uppercase tracking-[0.28em] text-xs text-blue-100">
-          Apple CI / Developer Tooling / Release Engineering
+        <p className="text-center uppercase tracking-[0.28em] text-xs text-blue-100 mb-4">
+          XCTest · AI-Assisted CI Triage · Platform Engineering
         </p>
         <TextGenerateEffect
           className='text-center text-[40px] md:text-5xl lg:text-6xl'
-          words='Building reliable CI/CD platforms for product teams'
+          words='CI/CD systems that recover fast and fail loud'
         />
         <p className='text-center mb-4 max-w-2xl text-sm leading-6 text-white-200 md:text-lg lg:text-xl'>
-          Hi, I&apos;m Gerard, a Senior Software Engineer in San Diego. I build CI/CD pipelines, release automation, developer tooling, and reliability workflows for large-scale cloud platforms.
+          Senior Engineer at Qualcomm (8 years). I build automation frameworks, AI-assisted failure triage tools,
+          and release pipelines — MTTR 30 min → 2 min across 475+ Jenkins pipelines.
         </p>
-        <a href="#about" className="mt-4">
-          <MagicButton 
-            title="Show my work"
+        <div className="flex flex-wrap gap-3 justify-center mb-6 text-xs text-white-200">
+          <span className="rounded-full border border-white/[0.15] px-3 py-1">Swift 6 · XCTest · xcresulttool</span>
+          <span className="rounded-full border border-white/[0.15] px-3 py-1">Python · Claude API · MCP</span>
+          <span className="rounded-full border border-white/[0.15] px-3 py-1">Jenkins · K8s · Ansible · Terraform</span>
+        </div>
+        <a href="#projects" className="mt-2">
+          <MagicButton
+            title="See the work"
             icon={<FaLocationArrow />}
             position='right'
           />
