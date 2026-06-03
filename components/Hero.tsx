@@ -24,8 +24,8 @@ const Hero = () => {
           words='CI/CD systems that recover fast and fail loud'
         />
         <p className='text-center mb-4 max-w-2xl text-sm leading-6 text-white-200 md:text-lg lg:text-xl'>
-          Senior Engineer at Qualcomm (8 years). I build automation frameworks, AI-assisted failure triage tools,
-          and release pipelines — MTTR 30 min → 2 min across 475+ Jenkins pipelines.
+          Senior Engineer with 8 years across platform automation. I build automation frameworks, AI-assisted failure triage tools,
+          and release pipelines. MTTR 30 min → 2 min across 475+ Jenkins pipelines.
         </p>
         <div className="flex flex-wrap gap-3 justify-center mb-6 text-xs text-white-200">
           <span className="rounded-full border border-white/[0.15] px-3 py-1">Swift 6 · XCTest · xcresulttool</span>

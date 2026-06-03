@@ -1,4 +1,4 @@
-# Portfolio — Gerard Recinto
+# Portfolio: Gerard Recinto
 
 ![Next.js Portfolio logo](docs/assets/logo.svg)
 
@@ -16,14 +16,14 @@ Commercial angle and funnel notes: [docs/go-to-market.md](docs/go-to-market.md).
 
 ## Features
 
-- **Spotlight effect:** Three layered `<Spotlight>` components (white, purple, blue) using `radial-gradient` masks to create a dynamic depth-of-field background — no canvas, no WebGL.
+- **Spotlight effect:** Three layered `<Spotlight>` components (white, purple, blue) using `radial-gradient` masks to create a dynamic depth-of-field background, no canvas or WebGL.
 - **Text generate effect:** `TextGenerateEffect` splits the heading string by word, renders each word as a Framer Motion span, and staggers opacity + blur from 0 → 1 on mount via `useEffect` + `useAnimate`.
-- **Magic button:** `MagicButton` wraps a button with a conic-gradient animated border (`@keyframes spin`) using a `::before` pseudo-element — pure CSS, no JS animation overhead.
+- **Magic button:** `MagicButton` wraps a button with a conic-gradient animated border (`@keyframes spin`) using a `::before` pseudo-element, pure CSS with no JS animation overhead.
 - **Portfolio sections:** Below-the-fold About, Selected Work, and Contact sections give the single-page site enough substance for recruiter and hiring-manager review.
 - **Impact metrics:** A dedicated metrics band highlights experience, breadth of shipped repositories, and release-readiness focus for quick hiring-manager scanning.
 - **Dark/light theming:** `next-themes` `ThemeProvider` with system-default detection; theme state persists across sessions via `localStorage`.
-- **App Router layout:** Single root `layout.tsx` injects `GeistSans` and `GeistMono` fonts via `next/font/google` — zero layout shift, no FOUT.
-- **Static export:** Fully pre-rendered at build time (`output: 'export'`), served as static HTML/CSS/JS — no Node.js process at runtime.
+- **App Router layout:** Single root `layout.tsx` injects `GeistSans` and `GeistMono` fonts via `next/font/google`, with zero layout shift and no FOUT.
+- **Static export:** Fully pre-rendered at build time (`output: 'export'`), served as static HTML/CSS/JS, with no Node.js process at runtime.
 
 ## Tech Stack
 
@@ -43,18 +43,18 @@ The app is a single-page static export. `app/page.tsx` composes the `Hero` and `
 
 ## Component Notes
 
-**`Spotlight`** — absolutely positioned `<div>` with a radial gradient controlled by `className` for position and `fill` for color. Three instances stack with different hue and position to create the layered lighting effect.
+**`Spotlight`**: absolutely positioned `<div>` with a radial gradient controlled by `className` for position and `fill` for color. Three instances stack with different hue and position to create the layered lighting effect.
 
-**`TextGenerateEffect`** — splits the input string on whitespace, maps each word to a `motion.span` with `initial={{ opacity: 0, filter: 'blur(10px)' }}` and `animate={{ opacity: 1, filter: 'blur(0)' }}`, delayed by word index × 0.1s.
+**`TextGenerateEffect`**: splits the input string on whitespace, maps each word to a `motion.span` with `initial={{ opacity: 0, filter: 'blur(10px)' }}` and `animate={{ opacity: 1, filter: 'blur(0)' }}`, delayed by word index × 0.1s.
 
-**`MagicButton`** — `position: relative` container with `::before` set to `background: conic-gradient(...)`, rotating via `@keyframes spin 2s linear infinite`. The inner button clips to the container shape via `overflow: hidden`.
+**`MagicButton`**: `position: relative` container with `::before` set to `background: conic-gradient(...)`, rotating via `@keyframes spin 2s linear infinite`. The inner button clips to the container shape via `overflow: hidden`.
 
 ## Project Structure
 
 ```
 app/
 ├── layout.tsx       root layout: GeistSans/Mono fonts, ThemeProvider, globals.css
-├── page.tsx         landing page — composes Hero
+├── page.tsx         landing page: composes Hero
 └── provider.tsx     "use client" ThemeProvider wrapper
 
 components/

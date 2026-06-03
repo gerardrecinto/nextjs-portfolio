@@ -15,7 +15,7 @@ const impactMetrics = [
   },
   {
     value: "97%",
-    label: "CI build time reduction: 6h 59m to ~15 min by migrating 13.48 GB of Git LFS artifacts to Artifactory",
+    label: "CI build time reduction: 6h 59m to ~15 min by migrating 13.48 GB of Git LFS artifacts to a dedicated artifact platform",
   },
   {
     value: "30min → 2min",
@@ -64,7 +64,7 @@ const projects = [
   {
     title: "devops-mcp",
     description:
-      "MCP server integrating Claude AI with 7 enterprise systems: Jira, GitHub, Jenkins, AWS, Kubernetes, Grafana, and Confluence. Provides AI-grounded root-cause analysis and incident triage across live infrastructure context. Deployed at Qualcomm to reduce context-switching during CI failure investigation by 70%. Supports the Axiom public LLM provider endpoint serving a globally distributed engineering organization.",
+      "MCP server integrating Claude AI with 7 enterprise systems: Jira, GitHub, Jenkins, AWS, Kubernetes, Grafana, and Confluence. Provides AI-grounded root-cause analysis and incident triage across live infrastructure context. Built to reduce context-switching during CI failure investigation by 70%. Supports a public LLM provider endpoint serving a globally distributed engineering organization.",
     stack: ["Python", "MCP", "Claude API", "Kubernetes", "AWS", "Jenkins"],
     github: "https://github.com/gerardrecinto/devops-mcp",
     metric: "7 systems · 70% context-switch reduction",
@@ -97,7 +97,7 @@ const PortfolioSections = () => {
           </div>
           <div className="space-y-5 text-sm leading-7 text-white-200 md:text-base">
             <p>
-              Senior Engineer at Qualcomm — DevOps &amp; Platform Engineering since 2021.
+              Senior Engineer focused on DevOps and Platform Engineering since 2021.
               I build the systems that give product engineers confidence to ship: CI pipelines
               that fail fast and recover automatically, AI-assisted triage tools that separate
               real regressions from infrastructure noise, and release automation that replaced
@@ -225,7 +225,7 @@ const PortfolioSections = () => {
               Gerard Louis Recinto
             </h2>
             <p className="mb-4 text-sm text-white-200">
-              San Diego, CA · gerardrecinto@gmail.com · Senior Engineer, Qualcomm
+              gerardrecinto@gmail.com · Senior Engineer, Platform Engineering
             </p>
             <div className="flex flex-wrap gap-2">
               {toolchain.map(({ label, icon: Icon }) => (
