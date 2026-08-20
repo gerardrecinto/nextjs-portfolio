@@ -6,13 +6,9 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-FROM node:20-alpine AS runner
-WORKDIR /app
-ENV NODE_ENV=production
+# next.config.mjs sets output: "export", so the build produces a static
+# /out directory, not a .next/standalone server. Serve it with nginx.
+FROM nginx:alpine AS runner
+COPY --from=builder /app/out /usr/share/nginx/html
 
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
-COPY --from=builder /app/public ./public
-
-EXPOSE 3000
-ENTRYPOINT ["node", "server.js"]
+EXPOSE 80
