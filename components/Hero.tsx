@@ -37,6 +37,7 @@ const Hero = () => {
             title="See the work"
             icon={<FaLocationArrow />}
             position='right'
+            as="span"
           />
         </a>
       </div>
