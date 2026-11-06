@@ -8,7 +8,7 @@ This portfolio is the owned channel for Gerard Recinto's engineering and startup
 
 | Offer | Buyer |
 |---|---|
-| Portfolio site | Recruiters, founders, collaborators. |
+| Portfolio site | Founders, collaborators, clients. |
 | Consulting CTA | Platform teams needing CI/CD, GitOps, Terraform, Kubernetes, or AI DevOps help. |
 | Product funnel | Visitors interested in DevOpsLedger, DevOps MCP, or coaching products. |
 | Content hub | Future blog posts and launch announcements. |
