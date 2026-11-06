@@ -19,8 +19,8 @@ Commercial angle and funnel notes: [docs/go-to-market.md](docs/go-to-market.md).
 - **Spotlight effect:** Three layered `<Spotlight>` components (white, purple, blue) using `radial-gradient` masks to create a dynamic depth-of-field background, no canvas or WebGL.
 - **Text generate effect:** `TextGenerateEffect` splits the heading string by word, renders each word as a Framer Motion span, and staggers opacity + blur from 0 → 1 on mount via `useEffect` + `useAnimate`.
 - **Magic button:** `MagicButton` wraps a button with a conic-gradient animated border (`@keyframes spin`) using a `::before` pseudo-element, pure CSS with no JS animation overhead.
-- **Portfolio sections:** Below-the-fold About, Selected Work, and Contact sections give the single-page site enough substance for recruiter and hiring-manager review.
-- **Impact metrics:** A dedicated metrics band highlights experience, breadth of shipped repositories, and release-readiness focus for quick hiring-manager scanning.
+- **Portfolio sections:** Below-the-fold About, Selected Work, and Contact sections give the single-page site enough substance for a first read.
+- **Impact metrics:** A dedicated metrics band highlights experience, breadth of shipped repositories, and release-readiness focus for quick scanning.
 - **Dark/light theming:** `next-themes` `ThemeProvider` with system-default detection; theme state persists across sessions via `localStorage`.
 - **App Router layout:** Single root `layout.tsx` injects `GeistSans` and `GeistMono` fonts via `next/font/google`, with zero layout shift and no FOUT.
 - **Static export:** Fully pre-rendered at build time (`output: 'export'`), served as static HTML/CSS/JS, with no Node.js process at runtime.
